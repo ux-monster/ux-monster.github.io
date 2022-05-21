@@ -152,7 +152,7 @@ const ScrollView = (function() {
       headerIndexList.some((headerIndex, i) => {
         const top = headerIndex.dataset.top;
         const nextTop = headerIndexList[i+1]?.dataset.top || top + 2000;
-        if(y >= top && y < nextTop) {
+        if(y >= top - 10 && y < nextTop) {
           removeClassAll('.header-index', 'active');
           document.querySelectorAll('.header-index')[i].classList.add('active');
         }
