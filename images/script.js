@@ -122,10 +122,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
   
   const HeaderIndex = (function() {
     const selector = '.page-content';
-    const dom = document.querySelector(selector);
+    const selectorTistory = '.page-content .contents_style';
+    const dom = document.querySelector(selectorTistory);
     if(dom) {
       const indexWrapperDom = document.querySelector('.index-group');
-      const children = Array.from(dom.children).filter(c => ['H1','H2','H3','H4','H5','H6'].includes(c.tagName));
+      const children = Array.from(dom.children).filter(c => ['H2','H3','H4','H5'].includes(c.tagName));
       children.forEach((c, i) => {
         const title = c.innerHTML;
         const depth = c.tagName.substr(1, 1);

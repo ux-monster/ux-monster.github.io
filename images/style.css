@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/* Tistory */
+.page-content > div {
+	flex-direction: column;
+}
+
 /* width */
 ::-webkit-scrollbar {
   display: none;
@@ -7,7 +12,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   color: #798379;
   background-color: #c7d7c922;
 }
