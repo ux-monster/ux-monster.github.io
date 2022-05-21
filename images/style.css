@@ -250,7 +250,7 @@ a {
 .page-ad {
   position: absolute;
   height: 100vh;
-  background-color: #5f665faa;
+  /* background-color: #5f665faa; */
   width: 300px;
   justify-content: center;
   align-items: center;
