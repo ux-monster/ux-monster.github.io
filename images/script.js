@@ -144,24 +144,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })();
   
   const ScrollView = (function() {
+    const contentHeight = document.querySelector('.page-content').scrollHeight;
     const selector = '.page-content';
     const dom = document.querySelector(selector);
-    let currentIndex = 0;
     if(dom) {
       dom.addEventListener('scroll', (e) => {
         const y = e.target.scrollTop;
-        const headerIndexList = Array.from(document.querySelectorAll('[data-top]'));
-        headerIndexList.some((headerIndex, i) => {
-          const top = headerIndex.dataset.top;
-          const nextTop = headerIndexList[i+1]?.dataset.top || top + 2000;
-          if(y >= top - 10 && y < nextTop - 10 && currentIndex !== i) {
-            removeClassAll('.header-index', 'active');
-            document.querySelectorAll('.header-index')[i].classList.add('active');
-            currentIndex = i;
-            console.log('changed');
-            return true;
-          }
-        })
+        const percent = y / (contentHeight - window.innerHeight) * 100;
+        document.querySelector('#scrollbar .background').style.transform = 'translateX('+(-100+percent)+'%)'
+        
+        const indexList = document.querySelectorAll('[data-top]');
+        const endY = document.querySelectorAll('[data-top]')[indexList.length-1].dataset.top;
+        
+        let indexPercent = y / (contentHeight - window.innerHeight - endY) * 100;
+        indexPercent = indexPercent >= 100 ? 100 : indexPercent;
+        document.querySelector('.index-group-wrapper .background').style.transform = 'translateY('+(indexPercent)+'%)'
       })
     }
   })();
