@@ -145,6 +145,7 @@ const HeaderIndex = (function() {
 const ScrollView = (function() {
   const selector = '.page-content';
   const dom = document.querySelector(selector);
+  let currentIndex = 0;
   if(dom) {
     dom.addEventListener('scroll', (e) => {
       const y = e.target.scrollTop;
@@ -152,9 +153,12 @@ const ScrollView = (function() {
       headerIndexList.some((headerIndex, i) => {
         const top = headerIndex.dataset.top;
         const nextTop = headerIndexList[i+1]?.dataset.top || top + 2000;
-        if(y >= top - 10 && y < nextTop) {
+        if(y >= top - 10 && y < nextTop - 10 && currentIndex !== i) {
           removeClassAll('.header-index', 'active');
           document.querySelectorAll('.header-index')[i].classList.add('active');
+          currentIndex = i;
+          console.log('changed');
+          return true;
         }
       })
     })

@@ -118,8 +118,8 @@ a {
   transform: translateX(-300px);
 }
 #subpage {
-  background-color: rgb(122, 103, 75);
   width: 300px;
+  background-color: #fff;
 }
 
 /* 프로필 */
@@ -244,6 +244,7 @@ a {
   flex: 1;
   flex-direction: column;
   overflow-y: auto;
+  padding: 20px 30px;
   padding-bottom: 50vh;
 }
 .page-content h1 {}
@@ -260,14 +261,23 @@ a {
   width: 100%;
 }
 
+.subpage {
+  padding: 20px 30px;
+  flex-direction: column;
+}
 .index-title {
-
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 .index-group {
   flex-direction: column;
 }
 .index-group .header-index {
   display: block;
+  padding: 12px 20px;
+  border-left: 1px solid #798379;
 }
 .index-group .header-index.active {
   font-weight: bold;
