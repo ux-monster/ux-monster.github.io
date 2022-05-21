@@ -83,7 +83,7 @@ const SidebarDetail = (function() {
     const background = document.createElement('div');
     background.className = 'background';
     background.setAttribute('data-category', link.innerHTML);
-    document.querySelector(selector).append(background);
+    document.querySelector(selector).appendChild(background);
   })
 
   return {
@@ -95,9 +95,13 @@ const SidebarDetail = (function() {
       category = _category;
       addClass(selector, expanded);
       removeClassAll('.background', 'show');
+      removeClassAll('.group', 'show');
       addClass('.background[data-category="'+_category+'"]', 'show');
+      addClass('.group[data-category="'+_category+'"]', 'show');
     },
     close: () => {
+      removeClassAll('.background', 'show');
+      removeClassAll('.group', 'show');
       removeClass(selector, expanded);
     },
   }
