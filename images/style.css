@@ -247,20 +247,59 @@ a {
   padding: 20px 30px;
   padding-bottom: 50vh;
 }
-.page-content h1 {}
-.page-content h2{}
-.page-content h3{}
-.page-content h4{}
-.page-content h5{}
-.page-content p {}
-.page-content span{}
-.page-content a {}
-.page-content pre {}
-.page-content code {}
+.page-content h1 {
+  font-size: 1.65em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.page-content h2 {
+	font-size: 1.25em;
+	font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.page-content h3 {
+  font-size: 1.125em;
+	font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 9px;
+}
+.page-content h4 {
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
+.page-content p {
+	font-size: 1em;
+}
+.page-content pre {
+	white-space: pre-wrap;       /* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	font-size: 1em;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.page-content .hljs {
+	background: #ffffff;
+	border-radius: 8px;
+	/* border: 1px solid var(--color-page-light); */
+}
+.page-content b {
+	font-size: 1em;
+	font-weight: bold;
+}
 .page-content img {
+	border-radius: 8px;
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
   width: 100%;
 }
+.page-content a {}
 
+/* 목차 페이지 */
 .subpage {
   padding: 20px 30px;
   flex-direction: column;
