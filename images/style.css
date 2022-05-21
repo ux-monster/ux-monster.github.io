@@ -1,18 +1,6 @@
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: #E4EAE4; 
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #abb9ad; 
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #c7d7c9; 
+  display: none;
 }
 html, body {
   height: 100%;
