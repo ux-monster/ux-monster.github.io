@@ -128,12 +128,15 @@ const HeaderIndex = (function() {
     children.forEach((c, i) => {
       const title = c.innerHTML;
       const depth = c.tagName.substr(1, 1);
+      const top = c.getBoundingClientRect().top;
       const indexDom = document.createElement('a');
       const marker = 'data-header-index-' + i;
       c.id = marker;
       indexDom.innerHTML = title;
+      indexDom.className = 'header-index';
       indexDom.setAttribute('href', '#' + marker);
       indexDom.setAttribute('data-depth', depth);
+      indexDom.setAttribute('data-top', top);
       indexWrapperDom.append(indexDom);
     });
   }
@@ -145,6 +148,15 @@ const ScrollView = (function() {
   if(dom) {
     dom.addEventListener('scroll', (e) => {
       const y = e.target.scrollTop;
+      const headerIndexList = Array.from(document.querySelectorAll('[data-top]'));
+      headerIndexList.some((headerIndex, i) => {
+        const top = headerIndex.dataset.top;
+        const nextTop = headerIndexList[i+1]?.dataset.top || top + 2000;
+        if(y >= top && y < nextTop) {
+          removeClassAll('.header-index', 'active');
+          document.querySelectorAll('.header-index')[i].classList.add('active');
+        }
+      })
     })
   }
 })();

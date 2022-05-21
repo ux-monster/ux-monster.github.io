@@ -244,6 +244,7 @@ a {
   flex: 1;
   flex-direction: column;
   overflow-y: auto;
+  padding-bottom: 50vh;
 }
 .page-content h1 {}
 .page-content h2{}
@@ -265,6 +266,9 @@ a {
 .index-group {
   flex-direction: column;
 }
-.index-group a {
+.index-group .header-index {
   display: block;
+}
+.index-group .header-index.active {
+  font-weight: bold;
 }
