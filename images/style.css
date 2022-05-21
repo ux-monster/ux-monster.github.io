@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* width */
 ::-webkit-scrollbar {
   display: none;
@@ -34,7 +36,7 @@ a {
 #scrollbar .background {
   height: 100%;
   width: 100%;
-  transform: translateX(-50%);
+  transform: translateX(-100%);
   background-color: #77817733;
 }
 #app {
@@ -126,11 +128,16 @@ a {
 #page {
   /* background-color: antiquewhite; */
   flex: 1;
-  background-color: #333;
+  /* background-color: #333; */
   flex-direction: row;
 }
 .page-ad {
-  transform: translateX(-300px);
+  position: relative;
+  transform: translateX(-300px) scale(0.12);
+  place-items: center;
+  height: 100vh;
+  perspective: 3200px;
+  perspective-origin: 50% 50%;
 }
 #subpage {
   width: 300px;

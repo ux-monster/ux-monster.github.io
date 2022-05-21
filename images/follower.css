@@ -1,0 +1,140 @@
+body #followers {
+  position: relative;
+  top: 0;
+  left: 300px;
+  font-size: 24rem;
+  transform: rotatex(-15deg) rotatey(30deg);
+  transform-style: preserve-3d;
+  -webkit-animation: float 4.1s cubic-bezier(0.3, 0, 0.7, 1) infinite, tilt 5s cubic-bezier(0.3, 0, 0.7, 1) infinite;
+          animation: float 4.1s cubic-bezier(0.3, 0, 0.7, 1) infinite, tilt 5s cubic-bezier(0.3, 0, 0.7, 1) infinite;
+}
+body #followers .pin {
+  color: #6a806a;
+  /* color: #798379; */
+  background: currentcolor;
+  padding: 0.4em 0.5em;
+  border-radius: 0.4em;
+  box-shadow: 0 0 5px 0 currentcolor;
+  transform: translateX(-15%);
+  transform-style: preserve-3d;
+}
+body #followers .pin.front {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body #followers .pin.front .icon {
+  height: 1em;
+  aspect-ratio: 1;
+  margin-right: 0.25em;
+  transform-style: preserve-3d;
+}
+body #followers .pin.front .icon > * {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body #followers .pin.front .icon > *.bottom {
+  color: #CCD1D9;
+}
+body #followers .pin.front .icon > *.top {
+  position: absolute;
+  top: 0;
+  color: white;
+  transform: translatez(0.03em);
+  filter: drop-shadow(0 0 0.008em currentcolor);
+}
+body #followers .pin.front .icon > * .head {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translatex(-50%);
+  background: currentcolor;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 100%;
+}
+body #followers .pin.front .icon > * .body {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 80%;
+  border-radius: 100%;
+  background: currentcolor;
+  transform: translate(-50%, -50%);
+}
+body #followers .pin.front .number {
+  position: relative;
+  color: #CCD1D9;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transform-style: preserve-3d;
+}
+body #followers .pin.front .number .bottom {
+  text-shadow: 0.025em 0.025em 0.05em #00000018, 0.05em 0.05em 0.125em #0000000C;
+}
+body #followers .pin.front .number .top {
+  position: absolute;
+  top: 0;
+  color: white;
+  transform: translatez(0.03em);
+  text-shadow: 0 0 0.015em currentcolor;
+}
+body #followers .pin.front:before {
+  content: "";
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 0.5em solid transparent;
+  border-top-color: currentcolor;
+  transform: translateX(-50%);
+}
+body #followers .pin.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -0.1em;
+  bottom: -0.05em;
+  color: #829282;
+  transform: translateX(-15%) translatez(-0.3em);
+}
+
+@-webkit-keyframes float {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -0.1em;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: -0.1em;
+  }
+}
+@-webkit-keyframes tilt {
+  0%, 100% {
+    transform: rotatex(-15deg) rotatey(25deg);
+  }
+  50% {
+    transform: rotatex(-15deg) rotatey(30deg);
+  }
+}
+@keyframes tilt {
+  0%, 100% {
+    transform: rotatex(-15deg) rotatey(25deg);
+  }
+  50% {
+    transform: rotatex(-15deg) rotatey(30deg);
+  }
+}

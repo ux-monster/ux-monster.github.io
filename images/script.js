@@ -144,11 +144,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })();
   
   const ScrollView = (function() {
-    const contentHeight = document.querySelector('.page-content').scrollHeight;
     const selector = '.page-content';
     const dom = document.querySelector(selector);
     if(dom) {
       dom.addEventListener('scroll', (e) => {
+        const contentHeight = document.querySelector('.page-content').scrollHeight;
         const y = e.target.scrollTop;
         const percent = y / (contentHeight - window.innerHeight) * 100;
         document.querySelector('#scrollbar .background').style.transform = 'translateX('+(-100+percent)+'%)'
