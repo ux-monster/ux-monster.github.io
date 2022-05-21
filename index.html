@@ -5,8 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UX Monster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./images/variable.css">
+  <link rel="stylesheet" href="./images/keyframes.css">
+  <link rel="stylesheet" href="./images/reset.css">
+  <link rel="stylesheet" href="./images/style.css">
 </head>
 <body>
-  
+  <div id="app">
+    <section id="sidebar">
+      <div class="profile">
+        <img class="profile-image" src="./images/profile.png" alt="">
+        <span class="profile-blog-name">UX Wiki</span>
+        <span class="profile-blog-description">The Free UX Wiki</span>
+      </div>
+      <ul class="categories">
+        <li class="category"><a class="category-link" href="#">React</a></li>
+        <li class="category"><a class="category-link" href="#">React Native</a></li>
+        <li class="category"><a class="category-link" href="#">Android</a></li>
+        <li class="category"><a class="category-link" href="#">IOS</a></li>
+        <li class="category"><a class="category-link" href="#">Secret</a></li>
+      </ul>
+    </section>
+    <section id="sidebar-detail"></section>
+    <section id="post"></section>
+    <section id="subpost"></section>
+  </div>
+  <script src="./images/script.js"></script>
 </body>
 </html>

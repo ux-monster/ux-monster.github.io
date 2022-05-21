@@ -1,0 +1,143 @@
+:root {
+  /* colors */
+  --white:#fff;
+  --wild-sand:#f4f4f4;
+  --gallery:#eaeaea;
+  --azalea:#f9cdcd;
+  --scorpion:#5e5e5e;
+  --tuatara:#252422;
+  --cod-gray:#191918;
+  --black:#000;
+  --white-rgb:255,255,255;
+  --wild-sand-rgb:244,244,244;
+  --gallery-rgb:235,235,235;
+  --azalea-rgb:249,205,205;
+  --scorpion-rgb:94,94,94;
+  --tuatara-rgb:37,36,34;
+  --cod-gray-rgb:26,26,24;
+  --black-rgb:0,0,0;
+  --background-color:var(--wild-sand);
+  --text-color:var(--tuatara);
+  /* font */
+  --font-size-small:1.1rem;
+  --font-size-body:1.4rem;
+  --font-size-large:1.8rem;
+  --line-height-small:1.14;
+  --line-height-body:1.4;
+  --line-height-large:1.45;
+  --font-weight-regular:300;
+  --font-weight-medium:400;
+  --font-weight-bold:700;
+  --font-family:"SctoGroteskA",sans-serif;
+  --letter-spacing:-0.01em;
+  --font-size-h1:4rem;
+  --font-size-h2:2.4rem;
+  --font-size-h3:2.2rem;
+  --font-size-h4:2rem;
+  --font-size-h5:1.8rem;
+  --font-size-h6:1.6rem;
+  --line-height-h1:0.9;
+  --line-height-h2:1.1;
+  --line-height-h3:1.1;
+  --line-height-h4:1.2;
+  --line-height-h5:1.1;
+  --line-height-h6:1.1;
+  --font-weight-h1:var(--font-weight-bold);
+  --font-weight-h2:var(--font-weight-bold);
+  --font-weight-h3:var(--font-weight-medium);
+  --font-weight-h4:var(--font-weight-bold);
+  --font-weight-h5:var(--font-weight-bold);
+  --font-weight-h6:var(--font-weight-medium);
+  --letter-spacing-h1:-0.05em;
+  --letter-spacing-h2:-0.05em;
+  --letter-spacing-h3:-0.035em;
+  --letter-spacing-h4:-0.02em;
+  --letter-spacing-h5:-0.02em;
+  --letter-spacing-h6:-0.02em;
+  /* z-index */
+  --z-noise:1;
+  --z-section:5;
+  --z-header:10;
+  --z-overlay:90;
+  --z-menu:100;
+  /* easing */
+  --ease-in:cubic-bezier(0.49,0.025,0.65,0.65);
+  --ease-out:cubic-bezier(0.28,0.44,0.49,1);
+  --ease-in-out:cubic-bezier(0.49,0.025,0.49,1);
+  --bounce:cubic-bezier(0.6,0,0.1,1.4);
+  --ease-in-soft:cubic-bezier(0.49,0.025,0.685,1);
+  --ease-out-soft:cubic-bezier(0.28,0,0.49,1);
+  --ease-in-out-soft:cubic-bezier(0.72,0,0.28,1);
+  --ease-in-out-hard:cubic-bezier(0.77,0,0.175,1);
+  --ease-garret:cubic-bezier(0.5,0,0,1);
+  /* layout */
+  --rem-base:62.5%;
+  --bottom-panel:1000;
+  --grid-width:100vw;
+  --grid-height:100vh;
+  --grid-padding:5.4vw;
+  --grid-column-count:6;
+  --grid-gutter:1.6rem;
+  --header-height:7.6rem;
+  --sticky-top:80;
+  --bottom-panel-height:0rem;
+  --pages-section:10vw;
+  --caseStudies-section:14rem;
+  --services-section:4rem;
+  --blog-section:10.4vw;
+  --thinking-section:12.5vw;
+  --industries-section:4rem;
+  --pages-meta-bar:6rem;
+  --caseStudies-meta-bar:6rem;
+  --services-meta-bar:6rem;
+  --industries-meta-bar:6rem;
+  --pages-intro-small:6rem;
+  --pages-intro-large:6rem;
+}
+@media only screen and (min-width:2160px){
+  :root{
+    /* layout */
+    --rem-base:82.5%
+  }
+}
+@media only screen and (min-width:1280px){
+  :root{
+    /* font */
+    --font-size-small:1.4rem;
+    --font-size-body:1.8rem;
+    --font-size-large:2.2rem;
+    --font-size-h2:4.2rem;
+    --font-size-h3:3.8rem;
+    --font-size-h4:2.8rem;
+    --font-size-h5:2.2rem;
+    --font-size-h6:2.2rem;
+    --grid-padding:8rem;
+    --grid-column-count:12;
+    --grid-gutter:2rem;
+    --header-height:12.8rem;
+    --pages-section:10vw;
+    --caseStudies-section:18.2vw;
+    --services-section:7.6vw;
+    --blog-section:10.4vw;
+    --thinking-section:12.5vw;
+    --industries-section:7.6vw;
+    --pages-meta-bar:8.5rem;
+    --caseStudies-meta-bar:8.5rem;
+    --services-meta-bar:8.5rem;
+    --industries-meta-bar:8.5rem;
+    --pages-intro-small:4.1vw;
+    --pages-intro-large:7.8vw;
+  }
+}
+
+@media only screen and (min-width:1024px){
+  :root{
+    --font-size-h1:6.25vw
+  }
+}
+
+@media only screen and (min-width:480px){
+  :root{
+    --font-size-h1:4.6rem
+  }
+}
