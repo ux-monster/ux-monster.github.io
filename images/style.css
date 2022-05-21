@@ -25,20 +25,24 @@ a {
   width: 100%;
 }
 #sidebar {
+  flex: none;
   width: 260px;
   flex-direction: column;
   box-shadow: 0 0 7px #c7d7c9;
 }
 #sidebar-detail {
+  flex: none;
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 0;
   /* background-color: #c7d7c9; */
   background-color: #333;
   background: none;
   overflow-x: hidden;
   overflow-y: auto;
+  width: 300px;
+  transform: translateX(-100%);
+  z-index: -10;
 }
 #sidebar-detail.expanded {
   /* width: 300px; */
@@ -46,10 +50,12 @@ a {
 }
 @keyframes expanded {
   0% {
-    width: 0;
+    z-index: -10;
+    transform: translateX(-100%);
   }
   100% {
-    width: 300px;
+    z-index: 1;
+    transform: translateX(0%);
   }
 }
 #sidebar-detail.expanded .background {
@@ -57,7 +63,7 @@ a {
   left: 0;
   top: 0;
   /* background-color: #c7d7c9; */
-  background-color: #c7d7c955;
+  background-color: #E4EAE4;
   width: 300%;
   height: 100%;
   transform: translateX(-100%);
@@ -99,12 +105,17 @@ a {
   }
 }
 #page {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   flex: 1;
+  background-color: #333;
+  flex-direction: row;
+}
+.page-ad {
+  transform: translateX(-300px);
 }
 #subpage {
   background-color: rgb(122, 103, 75);
-  width: 400px;
+  width: 300px;
 }
 
 /* 프로필 */
@@ -153,7 +164,7 @@ a {
   width: 100%;
   height: 100%;
   /* background-color: #c7d7c9; */
-  background-color: #c7d7c955;
+  background-color: #E4EAE4;
   top: 0;
   left: 0;
   transform: translateX(-100%);
@@ -185,9 +196,12 @@ a {
   }
 }
 
+/* 포스트 목록 */
 .group {
   flex-direction: column;
-  margin: 16px 0;
+  padding: 16px 0;
+  /* background-color: #333; */
+  background-color: #E4EAE4;
 }
 .group-name {
   font-weight: 500;
@@ -205,4 +219,48 @@ a {
   padding: 12px 30px;
   font-size: 16px;
   color: #5f665f;
+}
+
+.page-ad {
+  position: absolute;
+  height: 100vh;
+  background-color: #5f665faa;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  /* Empty style */
+  color: #E4EAE4;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+/* 포스트 내용 */
+.page-content {
+  background-color: #fff;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.page-content h1 {}
+.page-content h2{}
+.page-content h3{}
+.page-content h4{}
+.page-content h5{}
+.page-content p {}
+.page-content span{}
+.page-content a {}
+.page-content pre {}
+.page-content code {}
+.page-content img {
+  width: 100%;
+}
+
+.index-title {
+
+}
+.index-group {
+  flex-direction: column;
+}
+.index-group a {
+  display: block;
 }

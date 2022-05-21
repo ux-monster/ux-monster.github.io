@@ -118,3 +118,33 @@ bindEvent('.category-link', 'click', (e) => {
     SidebarDetail.open(category);
   }
 });
+
+const HeaderIndex = (function() {
+  const selector = '.page-content';
+  const dom = document.querySelector(selector);
+  if(dom) {
+    const indexWrapperDom = document.querySelector('.index-group');
+    const children = Array.from(dom.children).filter(c => ['H1','H2','H3','H4','H5','H6'].includes(c.tagName));
+    children.forEach((c, i) => {
+      const title = c.innerHTML;
+      const depth = c.tagName.substr(1, 1);
+      const indexDom = document.createElement('a');
+      const marker = 'data-header-index-' + i;
+      c.id = marker;
+      indexDom.innerHTML = title;
+      indexDom.setAttribute('href', '#' + marker);
+      indexDom.setAttribute('data-depth', depth);
+      indexWrapperDom.append(indexDom);
+    });
+  }
+})();
+
+const ScrollView = (function() {
+  const selector = '.page-content';
+  const dom = document.querySelector(selector);
+  if(dom) {
+    dom.addEventListener('scroll', (e) => {
+      const y = e.target.scrollTop;
+    })
+  }
+})();
