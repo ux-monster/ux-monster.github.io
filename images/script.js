@@ -1,12 +1,73 @@
 function bindEvent(selector, event, callback) {
-  const _selector = selector;
-  const _event = event;
-  
-  const dom = document.querySelectorAll(_selector);
-  console.log(dom);
+  const dom = document.querySelectorAll(selector);
   if (dom && dom.length > 0) {
     dom.forEach(e => {
-      e.addEventListener(_event, callback);
+      e.addEventListener(event, callback);
+    });
+  }
+}
+function hasClass(target, className) {
+  const type = typeof target;
+  const isSelector = type === 'string';
+  if (isSelector) {
+    const selector = target;
+    const dom = document.querySelector(selector);
+    if (dom) {
+      return dom.classList.contains(className);
+    }
+  } else {
+    const dom = target;
+    if (dom) {
+      return dom.currentTarget.classList.contains(className);
+    }
+  }
+  return false;
+}
+function addClass(target, className) {
+  const type = typeof target;
+  const isSelector = type === 'string';
+  if (isSelector) {
+    const selector = target;
+    const dom = document.querySelector(selector);
+    if (dom) {
+      dom.classList.add(className);
+    }
+  } else {
+    const dom = target;
+    if (dom) {
+      dom.currentTarget.classList.add(className);
+    }
+  }
+}
+function removeClass(target, className) {
+  const type = typeof target;
+  const isSelector = type === 'string';
+  if (isSelector) {
+    const selector = target;
+    const dom = document.querySelector(selector);
+    if (dom) {
+      dom.classList.remove(className);
+    }
+  } else {
+    const dom = target;
+    if (dom) {
+      dom.currentTarget.classList.remove(className);
+    }
+  }
+}
+function addClassAll(selector, className) {
+  const dom = document.querySelectorAll(selector);
+  if (dom && dom.length > 0) {
+    dom.forEach(e => {
+      e.classList.add(className);
+    });
+  }
+}
+function removeClassAll(selector, className) {
+  const dom = document.querySelectorAll(selector);
+  if (dom && dom.length > 0) {
+    dom.forEach(e => {
+      e.classList.remove(className);
     });
   }
 }
@@ -18,14 +79,15 @@ const SidebarDetail = (function() {
   let category = '';
   return {
     isOpen: (_category) => {
-      return _category === category && document.querySelector(selector).classList.contains(expanded);
+      return _category === category && 
+      hasClass(selector, expanded);
     },
     open: (_category) => {
       category = _category;
-      document.querySelector(selector).classList.add(expanded);
+      addClass(selector, expanded);
     },
     close: () => {
-      document.querySelector(selector).classList.remove(expanded);
+      removeClass(selector, expanded);
     },
   }
 })();
@@ -33,8 +95,11 @@ const SidebarDetail = (function() {
 bindEvent('.category-link', 'click', (e) => {
   const category = e.currentTarget.innerHTML;
   if(SidebarDetail.isOpen(category)) {
+    removeClass(e, 'selected');
     SidebarDetail.close();
   } else {
+    removeClassAll('.category-link', 'selected');
+    addClass(e, 'selected');
     SidebarDetail.open(category);
   }
 });
