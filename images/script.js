@@ -77,6 +77,15 @@ const SidebarDetail = (function() {
   const selector = '#sidebar-detail';
   const expanded = 'expanded';
   let category = '';
+
+  // Initialize - create background components
+  document.querySelectorAll('.category-link').forEach(link => {
+    const background = document.createElement('div');
+    background.className = 'background';
+    background.setAttribute('data-category', link.innerHTML);
+    document.querySelector(selector).append(background);
+  })
+
   return {
     isOpen: (_category) => {
       return _category === category && 
@@ -85,6 +94,8 @@ const SidebarDetail = (function() {
     open: (_category) => {
       category = _category;
       addClass(selector, expanded);
+      removeClassAll('.background', 'show');
+      addClass('.background[data-category="'+_category+'"]', 'show');
     },
     close: () => {
       removeClass(selector, expanded);
