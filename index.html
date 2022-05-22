@@ -16,12 +16,13 @@
   <link rel="stylesheet" href="./images/toggle.css">
   <link rel="stylesheet" href="./images/style.css">
   <link rel="icon" type="image/x-icon" href="./images/profile3.png">
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </head>
 <body>
   <div id="app">
     <div id="mode">
       <label class="switch">
-        <input type="checkbox" checked>
+        <input type="checkbox">
         <span class="slider round"></span>
       </label>
     </div>
@@ -39,74 +40,10 @@
         <li class="category"><a class="category-link" href="#">React</a></li>
         <li class="category"><a class="category-link" href="#">React Native</a></li>
         <li class="category"><a class="category-link" href="#">Android</a></li>
-        <li class="category"><a class="category-link" href="#">IOS</a></li>
+        <li class="category"><a class="category-link" href="#">iOS</a></li>
       </ul>
     </section>
-    <section id="sidebar-detail">
-      <div class="group" data-category="React">
-        <a class="group-name" href="#react">개발환경 만들기</a>
-        <ul class="posts" id="react">
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-        </ul>
-      </div>
-      <div class="group" data-category="React Native">
-        <a class="group-name" href="#react-native">개발환경 만들기</a>
-        <ul class="posts" id="react-native">
-          <li class="post"><a class="post-link" href="#">Node 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">Android Studio 설치하기</a></li>
-          <li class="post"><a class="post-link" href="#">XCode 설치하기</a></li>
-        </ul>
-      </div>
-      <div class="group" data-category="Android">
-        <a class="group-name" href="#android">개발환경 만들기</a>
-        <ul class="posts" id="react-native">
-          <li class="post"><a class="post-link" href="#">Android Studio 설치하기</a></li>
-        </ul>
-      </div>
-      <div class="group" data-category="IOS">
-        <a class="group-name" href="#ios">개발환경 만들기</a>
-        <ul class="posts" id="react-native">
-          <li class="post"><a class="post-link" href="#">XCode 설치하기</a></li>
-        </ul>
-      </div>
-    </section>
+    <section id="sidebar-detail"></section>
     <section id="page">
       <div class="page-ad">
         <div id="followers">

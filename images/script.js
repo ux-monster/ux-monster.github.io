@@ -92,7 +92,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
         return _category === category && 
         hasClass(selector, expanded);
       },
-      open: (_category) => {
+      open: async (_category) => {
+        // 데이터 불러오기
+        const posts = await Posts.getPosts(_category);
+        const groupByPosts = _.groupBy(posts, function(post) { return post.subCategory})
+        console.log(groupByPosts);
+
+        // 데이터 돔 추가하기
+        const postsDom = Object.keys(groupByPosts).map(subCategory => {
+          const posts = groupByPosts[subCategory];
+          return `
+            <div class="background" data-category="${_category}"></div>
+            <div class="group" data-category="${_category}">
+              <a class="group-name" href="#">개발환경 만들기</a>
+              <ul class="posts">
+                ${posts.map(post => {
+                  return `<li class="post"><a class="post-link" href="${post.link}">${post.title}</a></li>`
+                })}
+              </ul>
+            </div>
+          `;
+        })
+        document.querySelector('#sidebar-detail').innerHTML = postsDom;
+
+        // 확장 탭 열기
         category = _category;
         addClass(selector, expanded);
         removeClassAll('.background', 'show');
@@ -174,5 +197,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // 관리자모드 끄기
       }
     })
+  })();
+
+  const Posts = (function() {
+    return {
+      getPosts: (category) => {
+        let name = 'react';
+        switch (category) {
+          case 'React': name = 'react'; break;
+          case 'React Native': name = 'react_native'; break;
+          case 'Android': name = 'android'; break;
+          case 'iOS': name = 'ios'; break;
+          default:
+            break;
+        }
+        return fetch('./images/posts_'+ name + '.json').then(e => e.json());
+      }
+    }
   })();
 });
