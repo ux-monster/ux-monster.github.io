@@ -193,6 +193,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const checked = e.target.checked;
       if (checked) {
         // 관리자모드 켜기
+        removeClass('#admin', 'hide');
         addClass('#admin', 'show');
       } else {
         // 관리자모드 끄기
