@@ -163,4 +163,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
       })
     }
   })();
+
+  const Toggle = (function() {
+    const selector = '#mode input';
+    bindEvent(selector, 'change', (e) => {
+      const checked = e.target.checked;
+      if (checked) {
+        // 관리자모드 켜기
+      } else {
+        // 관리자모드 끄기
+      }
+    })
+  })();
 });
