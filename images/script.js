@@ -197,6 +197,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       } else {
         // 관리자모드 끄기
         removeClass('#admin', 'show');
+        addClass('#admin', 'hide');
       }
     })
   })();
