@@ -211,7 +211,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
           default:
             break;
         }
-        return fetch('./images/posts_'+ name + '.json').then(e => e.json());
+        let baseUrl = './images/posts_';
+        const tistoryBase = 'https://tistory1.daumcdn.net/tistory/5388634/skin/images/posts_';
+        if(window.location.hostname === 'uxwiki.tistory.com') {
+          baseUrl = tistoryBase;
+        }
+        return fetch(baseUrl + name + '.json').then(e => e.json());
       }
     }
   })();
