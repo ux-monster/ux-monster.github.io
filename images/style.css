@@ -374,7 +374,7 @@ a {
 	border-radius: 8px;
 	margin-top: 1rem !important;
 	margin-bottom: 1rem !important;
-  width: 100%;
+	max-width: 100%;
 }
 .page-content a {}
 

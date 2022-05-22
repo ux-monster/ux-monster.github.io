@@ -178,11 +178,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('#scrollbar .background').style.transform = 'translateX('+(-100+percent)+'%)'
         
         const indexList = document.querySelectorAll('[data-top]');
-        const endY = document.querySelectorAll('[data-top]')[indexList.length-1].dataset.top;
+        const endY = document.querySelectorAll('[data-top]')[indexList.length-1].dataset.top * 1;
         
         let indexPercent = y / (contentHeight - window.innerHeight - endY) * 100;
         indexPercent = indexPercent >= 100 ? 100 : indexPercent;
-        document.querySelector('.index-group-wrapper .background').style.transform = 'translateY('+(indexPercent)+'%)'
+        document.querySelector('.index-group-wrapper .background').style.transform = 'translateY('+(percent)+'%)'
       })
     }
   })();
