@@ -410,11 +410,41 @@ a {
   width: 100%;
 }
 .index-group .header-index {
+  position: relative;
   display: block;
   padding: 12px 20px;
   border-left: 3px solid #798379;
   background-color: #ffffff55;
 }
+.index-group .header-index:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.index-group .header-index[data-depth="3"] {
+	padding-left: 40px;
+}
+.index-group .header-index[data-depth="3"]:after {
+	left: 25px;
+  display: inline-block;
+  background-color: #333;
+}
+.index-group .header-index[data-depth="4"] {
+	padding-left: 60px;
+}
+.index-group .header-index[data-depth="4"]:after {
+	left: 45px;
+  display: inline-block;
+  background-color: #333;
+	height: 1px;
+	width: 6px;
+}
 .index-group .header-index.active {
   font-weight: bold;
 }
+
