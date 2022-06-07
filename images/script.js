@@ -97,23 +97,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const posts = await Posts.getPosts(_category);
         const groupByPosts = _.groupBy(posts, function(post) { return post.subCategory})
         console.log(groupByPosts);
-
+        console.log(Object.keys(groupByPosts));
+        
         // 데이터 돔 추가하기
         const postsDom = Object.keys(groupByPosts).map(subCategory => {
           const posts = groupByPosts[subCategory];
+          console.log(posts);
           return `
-            <div class="background" data-category="${_category}"></div>
-            <div class="group" data-category="${_category}">
-              <a class="group-name" href="#">개발환경 만들기</a>
-              <ul class="posts">
-                ${posts.map(post => {
-                  return `<li class="post"><a class="post-link" href="${post.link}">${post.title}</a></li>`
-                })}
-              </ul>
-            </div>
+            <a class="group-name" href="#">${subCategory}</a>
+            <ul class="posts">
+            ${posts.map(post => `
+              <li class="post">
+                <a class="post-link" href="${post.link}">${post.title}</a>
+              </li>`
+            ).join('')}
+            </ul>
           `;
-        })
-        document.querySelector('#sidebar-detail').innerHTML = postsDom;
+        }).join('')
+
+        document.querySelector('#sidebar-detail').innerHTML = `
+          <div class="background" data-category="${_category}"></div>
+          <div class="group" data-category="${_category}">
+            ${postsDom}
+          </div>
+        `;;
 
         // 확장 탭 열기
         category = _category;
