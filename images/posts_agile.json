@@ -1,7 +1,11 @@
 [
+  {"category":"Agile", "subCategory":"Team Documents", "title":"Requirements", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Team Documents", "title":"Basket of opinions", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Team Documents", "title":"Hub pages created by specific teams", "thumbnail": "./images/profile3.png", "link": "/1"},
+
   {"category":"Agile", "subCategory":"Code Management", "title":"Commit/PR Template", "thumbnail": "./images/profile3.png", "link": "/1"},
   {"category":"Agile", "subCategory":"Code Management", "title":"Code Review", "thumbnail": "./images/profile3.png", "link": "/1"},
-
+  
   {"category":"Agile", "subCategory":"Logs", "title":"Amplitude", "thumbnail": "./images/profile3.png", "link": "/1"},
   {"category":"Agile", "subCategory":"Logs", "title":"Firebase crashlytics", "thumbnail": "./images/profile3.png", "link": "/1"},
   
@@ -9,7 +13,9 @@
   {"category":"Agile", "subCategory":"Application", "title":"Performance Management", "thumbnail": "./images/profile3.png", "link": "/1"},
   {"category":"Agile", "subCategory":"Application", "title":"LAB", "thumbnail": "./images/profile3.png", "link": "/1"},
   
-  {"category":"Agile", "subCategory":"Schedule Management", "title":"Scheduling process", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Schedule Management", "title":"Daily standup", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Schedule Management", "title":"Daily snippet", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Schedule Management", "title":"Follow the scheduling process", "thumbnail": "./images/profile3.png", "link": "/1"},
   {"category":"Agile", "subCategory":"Schedule Management", "title":"Break the task into smaller units", "thumbnail": "./images/profile3.png", "link": "/1"},
-  {"category":"Agile", "subCategory":"Schedule Management", "title":"Write Daily Availability", "thumbnail": "./images/profile3.png", "link": "/1"}
+  {"category":"Agile", "subCategory":"Schedule Management", "title":"Write your daily availability", "thumbnail": "./images/profile3.png", "link": "/1"}
 ]
