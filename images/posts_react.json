@@ -1,5 +1,5 @@
 [
-  {"category":"React", "subCategory":"Tutorial", "title":"Install Git", "thumbnail": "./images/profile3.png", "link": "/1"}
+  {"category":"React", "subCategory":"Tutorial", "title":"Install Git", "thumbnail": "./images/profile3.png", "link": "/1"},
   {"category":"React", "subCategory":"Tutorial", "title":"Install Node JS", "thumbnail": "./images/profile3.png", "link": "/1"},
   {"category":"React", "subCategory":"Tutorial", "title":"Install Visual Studio Code", "thumbnail": "./images/profile3.png", "link": "/1"}
 ]
