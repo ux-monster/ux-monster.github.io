@@ -1,0 +1,15 @@
+[
+  {"category":"Agile", "subCategory":"Code Management", "title":"Commit/PR Template", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Code Management", "title":"Code Review", "thumbnail": "./images/profile3.png", "link": "/1"},
+
+  {"category":"Agile", "subCategory":"Logs", "title":"Amplitude", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Logs", "title":"Firebase crashlytics", "thumbnail": "./images/profile3.png", "link": "/1"},
+  
+  {"category":"Agile", "subCategory":"Application", "title":"A/B Test", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Application", "title":"Performance Management", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Application", "title":"LAB", "thumbnail": "./images/profile3.png", "link": "/1"},
+  
+  {"category":"Agile", "subCategory":"Schedule Management", "title":"Scheduling process", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Schedule Management", "title":"Break the task into smaller units", "thumbnail": "./images/profile3.png", "link": "/1"},
+  {"category":"Agile", "subCategory":"Schedule Management", "title":"Write Daily Availability", "thumbnail": "./images/profile3.png", "link": "/1"}
+]

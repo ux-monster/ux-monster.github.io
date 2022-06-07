@@ -219,6 +219,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
           case 'React Native': name = 'react_native'; break;
           case 'Android': name = 'android'; break;
           case 'iOS': name = 'ios'; break;
+          case 'Agile': name = 'agile'; break;
           default:
             break;
         }
