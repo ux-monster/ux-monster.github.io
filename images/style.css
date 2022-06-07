@@ -4,6 +4,9 @@
 .page-content > div {
 	flex-direction: column;
 }
+blockquote {
+	width: 100%;
+}
 
 /* width */
 ::-webkit-scrollbar {
