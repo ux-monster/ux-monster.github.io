@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Tistory */
-.page-content > div {
+.page-desc > div {
 	flex-direction: column;
 }
 blockquote {
@@ -23,7 +23,7 @@ section, header, article, div {
   display: flex;
 }
 a {
-  color: #333;
+  color: #516951;
   text-decoration: none;
 }
 .container {
@@ -38,7 +38,8 @@ a {
   top: 0;
   height: 100vh;
   width: 100%;
-  background-color: #acb9ad;
+  /* background-color: #acb9ad; */
+  background-color: #fff;
   opacity: 0;
   z-index: -1;
 }
@@ -76,6 +77,13 @@ a {
     z-index: -1;
   }
 }
+.admin {
+  width: 100%;
+  background-color: #51695111;
+  align-items: center;
+  flex-direction: column;
+}
+.admin .hello {}
 
 #app {
   display: flex;
@@ -115,7 +123,6 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* background-color: #c7d7c9; */
   background-color: #333;
   background: none;
   overflow-x: hidden;
@@ -123,11 +130,52 @@ a {
   width: 300px;
   transform: translateX(-100%);
   z-index: -10;
+  transition: width .6s;
 }
 #sidebar-detail.expanded {
-  /* width: 300px; */
   animation: expanded 0.6s var(--ease-out) forwards;
 }
+#app.expanded-post #sidebar-detail{
+  width: 0px;
+  transition: width .6s;
+}
+#app.expanded-post .page-ad {
+  display: none;
+}
+#expand-post-button {
+  position: absolute;
+  left: 560px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #c7d7c955;
+  z-index: 9999;
+  transition: left .6s;
+  box-sizing: border-box;
+  padding: 10px;
+  opacity: 0;
+}
+#expand-post-button:hover {
+  opacity: 1;
+  transition: opacity .3s;
+}
+#expand-post-button img {
+  opacity: 0.2;
+  width: 100%;
+  transform: rotate(0deg);
+  transition: transform .6s;
+}
+#app.expanded-post #expand-post-button {
+  left: 260px;
+  transition: left .6s;
+}
+#app.expanded-post #expand-post-button img {
+  transform: rotate(540deg);
+  transition: transform .6s;
+}
+
 @keyframes expanded {
   0% {
     z-index: -10;
@@ -189,6 +237,7 @@ a {
   flex: 1;
   /* background-color: #333; */
   flex-direction: row;
+  width: 100%;
 }
 .page-ad {
   position: relative;
@@ -325,37 +374,47 @@ a {
 }
 
 /* 포스트 내용 */
+.page-desc {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+}
 .page-content {
   background-color: #fff;
   flex: 1;
   flex-direction: column;
   overflow-y: auto;
-  padding: 20px 30px;
+  padding: 32px 64px;
   padding-bottom: 50vh;
 }
+#admin h1,
 .page-content h1 {
   font-size: 1.65em;
   font-weight: bold;
   padding-top: 10px;
   padding-bottom: 15px;
 }
+#admin h2,
 .page-content h2 {
 	font-size: 1.25em;
 	font-weight: bold;
   padding-top: 30px;
   padding-bottom: 10px;
 }
+#admin h3,
 .page-content h3 {
   font-size: 1.125em;
 	font-weight: bold;
   padding-top: 30px;
   padding-bottom: 8px;
 }
+#admin h4,
 .page-content h4 {
   font-weight: bold;
   padding-top: 30px;
   padding-bottom: 6px;
 }
+#admin p,
 .page-content p {
 	font-size: 1em;
 }
@@ -388,7 +447,7 @@ a {
 
 /* 목차 페이지 */
 .subpage {
-  padding: 20px 30px;
+  padding: 64px 30px;
   flex-direction: column;
   width: 100%;
 }
@@ -396,7 +455,7 @@ a {
   letter-spacing: 2px;
   font-weight: 300;
   font-size: 16px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   padding-bottom: 20px;
 }
 .index-group-wrapper {
@@ -456,3 +515,81 @@ a {
   font-weight: bold;
 }
 
+.new-posts {}
+.new-post {
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 32px 0;
+}
+.new-post-link {}
+.new-post-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.new-post-header .new-post-author {
+  font-weight: 400;
+}
+.new-post-header .new-post-author-thumbnail {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 8px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.new-post-header .new-post-dot {
+  padding: 0 4px;
+  font-weight: 400;
+}
+.new-post-header .new-post-date {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.new-post-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+.new-post-content {
+  display: flex;
+  flex-direction: column;
+  padding-right: 60px;
+}
+.new-post-content .new-post-title {
+  font-size: 24px;
+  line-height: 28px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 8px;
+}
+.new-post-content .new-post-summary {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+.new-post-main .new-post-thumbnail {
+  width: 112px;
+  height: 112px;
+  display: inline-block;
+  margin-top: 0 !important;
+}
+.ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

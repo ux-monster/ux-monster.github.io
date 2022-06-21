@@ -20,11 +20,39 @@
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </head>
 <body>
-  <div id="admin"></div>
+  <div id="admin" class="">
+    <div class="admin">
+      <h2>함께 일하는 방법</h2>
+      <ul>
+        <!-- 하루의 시작과 끝을 적어보기 -->
+        <li><a href="#">데일리 스탠드업</a></li>
+        <li><a href="#">데일리 스니펫</a></li>
+        <li><a href="#">"뭐라고?" 회고</a></li>
+        <!-- 스프린트의 시작과 끝을 적어보기 -->
+        <li><a href="#">가용시간 체크하기 (1회/2주)</a></li>
+        <li><a href="#">태스크 단위로 회고하기 (1회/2주)</a></li>
+        <!-- 제품 문서 -->
+        <li><a href="#">테스트 시나리오</a></li>
+        <li><a href="#">번역 문구</a></li>
+        <!-- 개발 문서 -->
+        <li><a href="#">컴포넌트 관리</a></li>
+        <li><a href="#">프로세스/기능 정의서</a></li>
+      </ul>
+      <h2>나의 색을 찾아가는 여정</h2>
+      <ul>
+        <li><a href="#">[운동]으로 몸 건강 챙기기</a></li>
+        <li><a href="#">기분과 계절을 [옷]으로 표현하기</a></li>
+        <li><a href="#">가까운 주변이라도 [여행]을 가보기</a></li>
+        <li><a href="#">이야기가 녹아있는 소설[책] 읽기</a></li>
+        <li><a href="#">채식주의자를 위한 [요리] 연습하기</a></li>
+        <li><a href="#">조금씩 멀리 [운전]해보기</a></li>
+      </ul>
+    </div>
+  </div>
   <div id="app">
     <div id="mode">
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" checked>
         <span class="slider round"></span>
       </label>
     </div>
@@ -39,13 +67,18 @@
         <span class="profile-blog-description">The Free UX Wiki</span>
       </div>
       <ul class="categories">
+        <li class="category"><a class="category-link" href="#">Agile</a></li>
         <li class="category"><a class="category-link" href="#">React</a></li>
         <li class="category"><a class="category-link" href="#">React Native</a></li>
         <li class="category"><a class="category-link" href="#">Android</a></li>
         <li class="category"><a class="category-link" href="#">iOS</a></li>
       </ul>
     </section>
-    <section id="sidebar-detail"></section>
+    <button id="expand-post-button">
+      <img src="./images/right-arrow.png" />
+    </button>
+    <section id="sidebar-detail">
+    </section>
     <section id="page">
       <div class="page-ad">
         <div id="followers">
@@ -70,28 +103,108 @@
       </div>
       <!-- Sample Post -->
       <div class="page-content">
-        <h1 class="intro-title">
+        <!-- <h1 class="intro-title">
           <span>New Posts</span>
-        </h1>
-
-        <!-- <div class="contents_style">
-          <h1>Hello World!</h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis voluptate, quas quaerat unde aspernatur molestias nobis itaque molestiae ut esse iure dolores, iste, consectetur amet nesciunt fugiat doloremque temporibus?</p>
-          <h2>Hello World!</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis voluptate, quas quaerat unde aspernatur molestias nobis itaque molestiae ut esse iure dolores, iste, consectetur amet nesciunt fugiat doloremque temporibus?</p>
-          <h3>Hello World!</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis voluptate, quas quaerat unde aspernatur molestias nobis itaque molestiae ut esse iure dolores, iste, consectetur amet nesciunt fugiat doloremque temporibus?</p>
-          <h4>Hello World!</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis voluptate, quas quaerat unde aspernatur molestias nobis itaque molestiae ut esse iure dolores, iste, consectetur amet nesciunt fugiat doloremque temporibus?</p>
-          <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut inventore at sequi ad dolorem qui tempore dolore eaque eligendi placeat vel fugiat natus mollitia quibusdam, impedit nobis. Officiis, voluptatibus consequatur.</a>
-          <pre>
-            <code>
-              $ yarn install
-            </code>
-          </pre>
-          <span></span>
-          <img src="./images/profile2.jpeg" alt="">
-        </div> -->
+        </h1> -->
+        <ul class="new-posts">
+					<s_list_rep>
+						<li class="new-post">
+							<a class="new-post-link" href="#">
+								<div class="new-post-header">
+                  <img class="new-post-author-thumbnail" src="https://avatars.githubusercontent.com/u/88924462?s=40&v=4" />
+									<span class="new-post-author">UX Monster</span>
+                  <span class="new-post-dot">·</span>
+									<span class="new-post-date">
+                    2022.09.09
+                  </span>
+								</div>
+                <div class="new-post-main">
+                  <div class="new-post-content">
+                    <h4 class="new-post-title" href="[##_list_rep_link_##]">How to solve this issue?</h4>
+                    <p class="new-post-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque fugiat cum sint eius dolorum quae nostrum, inventore totam obcaecati porro nihil omnis ipsum dolor, iste aspernatur accusamus earum. Pariatur.</p>
+                  </div>
+                  <img class="new-post-thumbnail" src="https://miro.medium.com/fit/c/224/224/1*FubSaef6gwnE4af7Cm0-7g.png" />
+                </div>
+							</a>
+						</li>
+            <li class="new-post">
+							<a class="new-post-link" href="#">
+								<div class="new-post-header">
+                  <img class="new-post-author-thumbnail" src="https://avatars.githubusercontent.com/u/88924462?s=40&v=4" />
+									<span class="new-post-author">UX Monster</span>
+                  <span class="new-post-dot">·</span>
+									<span class="new-post-date">
+                    2022.09.09
+                  </span>
+								</div>
+                <div class="new-post-main">
+                  <div class="new-post-content">
+                    <h4 class="new-post-title" href="[##_list_rep_link_##]">How to solve this issue?</h4>
+                    <p class="new-post-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque fugiat cum sint eius dolorum quae nostrum, inventore totam obcaecati porro nihil omnis ipsum dolor, iste aspernatur accusamus earum. Pariatur.</p>
+                  </div>
+                  <img class="new-post-thumbnail" src="https://miro.medium.com/fit/c/224/224/1*FubSaef6gwnE4af7Cm0-7g.png" />
+                </div>
+							</a>
+						</li>
+            <li class="new-post">
+							<a class="new-post-link" href="#">
+								<div class="new-post-header">
+                  <img class="new-post-author-thumbnail" src="https://avatars.githubusercontent.com/u/88924462?s=40&v=4" />
+									<span class="new-post-author">UX Monster</span>
+                  <span class="new-post-dot">·</span>
+									<span class="new-post-date">
+                    2022.09.09
+                  </span>
+								</div>
+                <div class="new-post-main">
+                  <div class="new-post-content">
+                    <h4 class="new-post-title" href="[##_list_rep_link_##]">How to solve this issue?</h4>
+                    <p class="new-post-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque fugiat cum sint eius dolorum quae nostrum, inventore totam obcaecati porro nihil omnis ipsum dolor, iste aspernatur accusamus earum. Pariatur.</p>
+                  </div>
+                  <img class="new-post-thumbnail" src="https://miro.medium.com/fit/c/224/224/1*FubSaef6gwnE4af7Cm0-7g.png" />
+                </div>
+							</a>
+						</li>
+            <li class="new-post">
+							<a class="new-post-link" href="#">
+								<div class="new-post-header">
+                  <img class="new-post-author-thumbnail" src="https://avatars.githubusercontent.com/u/88924462?s=40&v=4" />
+									<span class="new-post-author">UX Monster</span>
+                  <span class="new-post-dot">·</span>
+									<span class="new-post-date">
+                    2022.09.09
+                  </span>
+								</div>
+                <div class="new-post-main">
+                  <div class="new-post-content">
+                    <h4 class="new-post-title" href="[##_list_rep_link_##]">How to solve this issue?</h4>
+                    <p class="new-post-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque fugiat cum sint eius dolorum quae nostrum, inventore totam obcaecati porro nihil omnis ipsum dolor, iste aspernatur accusamus earum. Pariatur.</p>
+                  </div>
+                  <img class="new-post-thumbnail" src="https://miro.medium.com/fit/c/224/224/1*FubSaef6gwnE4af7Cm0-7g.png" />
+                </div>
+							</a>
+						</li>
+            <li class="new-post">
+							<a class="new-post-link" href="#">
+								<div class="new-post-header">
+                  <img class="new-post-author-thumbnail" src="https://avatars.githubusercontent.com/u/88924462?s=40&v=4" />
+									<span class="new-post-author">UX Monster</span>
+                  <span class="new-post-dot">·</span>
+									<span class="new-post-date">
+                    2022.09.09
+                  </span>
+								</div>
+                <div class="new-post-main">
+                  <div class="new-post-content">
+                    <h4 class="new-post-title" href="[##_list_rep_link_##]">How to solve this issue?</h4>
+                    <p class="new-post-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque fugiat cum sint eius dolorum quae nostrum, inventore totam obcaecati porro nihil omnis ipsum dolor, iste aspernatur accusamus earum. Pariatur.</p>
+                  </div>
+                  <img class="new-post-thumbnail" src="https://miro.medium.com/fit/c/224/224/1*FubSaef6gwnE4af7Cm0-7g.png" />
+                </div>
+							</a>
+						</li>
+					</s_list_rep>
+				</ul>
       </div>
     </section>
     <section id="subpage">

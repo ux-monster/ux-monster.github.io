@@ -8,11 +8,24 @@
     top: 0;
     height: 100vh;
   }
+  .page-content {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 }
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+  .page-content {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 @media (max-width: 780px) {
   #sidebar, #sidebar-detail {
     display: none;
+  }
+  .page-content {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media (max-width: 680px) {

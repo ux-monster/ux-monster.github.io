@@ -73,6 +73,13 @@ function removeClassAll(selector, className) {
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
+  const isHome = window.location.pathname === '/';
+  if(isHome) document.querySelector('#subpage').style.display = 'none';
+
+  document.querySelector('#expand-post-button').addEventListener('click', () => {
+    document.querySelector('#app').classList.toggle('expanded-post');
+  })
+
   // 카테고리 상세 페이지 다루기
   const SidebarDetail = (function() {
     const selector = '#sidebar-detail';
