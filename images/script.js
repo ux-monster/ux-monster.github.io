@@ -136,6 +136,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         removeClassAll('.group', 'show');
         addClass('.background[data-category="'+_category+'"]', 'show');
         addClass('.group[data-category="'+_category+'"]', 'show');
+        // 확장 탭 열기 전, 축소 제거
+        document.querySelector('#app').classList.remove('expanded-post');
       },
       close: () => {
         removeClassAll('.background', 'show');
