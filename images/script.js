@@ -74,7 +74,12 @@ function removeClassAll(selector, className) {
 
 window.addEventListener('DOMContentLoaded', (event) => {
   const isHome = window.location.pathname === '/';
-  if(isHome) document.querySelector('#subpage').style.display = 'none';
+  if(isHome) {
+    document.querySelector('#subpage').style.display = 'none';
+    document.querySelector('#app').classList.remove('expanded-post');
+  } else {
+    document.querySelector('#app').classList.add('expanded-post');
+  }
 
   document.querySelector('#expand-post-button').addEventListener('click', () => {
     document.querySelector('#app').classList.toggle('expanded-post');
